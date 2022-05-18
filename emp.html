@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+     
+
+        .container {
+            justify-content: center;
+     
+            padding: 24px 56px;
+            background-color: rgb(211, 107, 81);
+        }
+
+        .col {
+            margin: 10px;
+            padding: 15px;
+
+            /* color: black; */
+        }
+
+        .errors {
+            font-weight: bold;
+            color: red;
+        }
+
+        input,
+        select {
+            padding: 6px;
+        }
+
+        * {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+
+        <div>
+            <h2>Employ's Details</h2>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 ">Name:</div>
+            <div class="col-xs-12 col-sm-5 "><input class="form-control form-sm" type="text" id="fname"></div>
+        </div> <br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 ">Eamil</div>
+            <div class="col-xs-12 col-sm-5 "><input class="form-control form-sm" type="text" id="femail"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2">Mobile</div>
+            <div class="col-xs-12 col-sm-5"><input class="form-control form-sm" type="text" id="fphone"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2">Emp Code</div>
+            <div class="col-xs-12 col-sm-5"><input class="form-control form-sm" type="text" id="empco"></div>
+        </div> <br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2">Gender</div>
+            <div class="col-xs-12 col-sm-5"> <select name="" id="gender">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="others">others</option>
+                </select></div>
+        </div> <br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2">State and city</div>
+            <div class="col-xs-12 col-sm-8 ">
+                <select name="" class="col-xs-12 col-sm-3" id="state" onchange="stateCity()">
+                    <option value="">Select</option>
+                    <option value="mp">MP</option>
+                    <option value="rj">RJ</option>
+                    <option value="gj">GJ</option>
+                </select>
+
+                <select name="" class=" col-xs-12 col-sm-3" id="city">
+                    <option id="s">select</option>
+                    <option id="c1"></option>
+                    <option id="c2"></option>
+                    <option id="c3"></option>
+                </select>
+            </div>
+        </div> <br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2">EMP code(for search)</div>
+            <div class="col-xs-12 col-sm-5"><input class="form-control form-sm" type="text form-control" id="empcoS"></div>
+        </div> <br>
+        <div class="row">
+            <div class="col col-sm-5">
+                <input type="submit" class="btn btn-light" onclick="readlocalstorage2()" id="read_localstorage"
+                    value="search">
+
+            </div>
+            <div class="col col-sm-5">
+                <input type="submit" class="btn btn-light" onclick="myfun()" value="ADD">
+            </div>
+        </div> <br>
+        <div>
+            <div id="nameerror">
+                <span class="errors"></span>
+            </div>
+            <div id="error2">
+                <span class="errors"></span>
+            </div>
+            <div id="error3">
+                <span class="errors"></span>
+            </div>
+            <div id="error4">
+                <span class="errors"></span>
+            </div>
+            <div id="error4">
+                <span class="errors"></span>
+            </div>
+            <div id="error5">
+                <span class="errors"></span>
+            </div>
+            <div id="error6">
+                <span class="errors"></span>
+            </div>
+            <div id="error7">
+                <span class="errors"></span>
+            </div>
+            <div id="error8">
+                <span class="errors"></span>
+            </div>
+        </div>
+
+    </div>
+    <script src="emp.js"> </script>
+    <script></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+ -->
+</body>
+
+</html>
